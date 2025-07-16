@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王可靜的讀書計畫 | 成功大學醫學系</title>
+  
+  <!-- 載入 Tailwind CSS 框架 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- 載入 Google Font (cwTeXYen)，使用 <link> 標籤以獲得更佳效能 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=cwTeXYen&display=swap" rel="stylesheet">
+  
+  <style>
+    /* 將 cwTeXYen 字體設定為主要字體。
+      Tailwind CSS 預設使用 'sans' 作為字體類別，我們在此處覆寫它。
+      同時加入 Noto Sans TC 作為備用，以應對部分特殊字元。
+    */
+    body {
+      font-family: 'cwTeXYen', 'Noto Sans TC', sans-serif;
+    }
+    
+    /* 為所有內容區塊設定過渡動畫效果。
+      當 opacity (透明度) 改變時，會有 300ms 的平滑動畫。
+    */
+    .content-block {
+      transition: opacity 300ms ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- 主容器，設定最大寬度並水平居中 -->
+  <div class="container mx-auto max-w-4xl px-4 py-8 md:py-12">
+    
+    <header class="text-center mb-10">
+      <!-- 主標題，使用指定的顏色 -->
+      <h1 class="text-5xl md:text-6xl font-bold text-[#4a6d6c] mb-2">
+        王可靜的讀書計畫
+      </h1>
+      <p class="text-2xl md:text-3xl text-[#536363] font-bold">申請成功大學醫學系</p>
+    </header>
+
+    <main>
+      <!-- 導覽區塊 -->
+      <nav class="mb-8">
+        <!-- 美化後的下拉選單，新增預設選項 -->
+        <select id="phaseSelect" aria-label="選擇讀書計畫階段" class="bg-white border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 shadow-sm">
+          <option value="placeholder" disabled selected>請選擇讀書計畫階段</option>
+          <option value="phase1">階段一：奠基與定向</option>
+          <option value="phase2">階段二：醫學養成</option>
+          <option value="phase3">階段三：從願景到志業</option>
+          <option value="conclusion">結語</option>
+        </select>
+      </nav>
+
+      <!-- 內容區塊容器 -->
+      <div class="bg-white rounded-lg p-6 md:p-8 ring-1 ring-gray-200 shadow-sm min-h-[400px]">
+        
+        <!-- 預設圖片區塊 -->
+        <div id="placeholder-content" class="content-block text-center">
+          <img src="https://placehold.co/800x400/f9fafb/a3a3a3?text=graph.png" alt="讀書計畫圖表" class="mx-auto rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/800x400';">
+        </div>
+
+        <!-- 階段一 -->
+        <section id="phase1" class="content-block hidden">
+          <h2 class="text-2xl font-bold text-[#0799a8] mb-4">階段一：奠基與定向 — 入學前的準備</h2>
+          <div class="space-y-4 text-lg leading-relaxed text-gray-700">
+            <p>為了成為一名符合成大醫學系期望的學生，我的高中歲月不僅僅是為了學業成績，更是為未來奠定基礎的旅程。我將那段時期視為靜心耕耘的時光，為穩健地攀登醫學高峰深植根基。從科學、人文到醫學研究前沿，我全面地在這三個領域做好準備，以迎接未來的挑戰。</p>
+            <p>我深知醫學建立在扎實的基礎科學之上。因此，在高中期間，我對生物、化學、物理和數學投入了極大的努力——不滿足於僅僅在課堂上學習，而是致力於理解知識背後的原理。我相信，唯有對基礎科學原理有透徹的理解，未來才能整合複雜的醫學知識。</p>
+            <p>進入成大前，我希望能預習幾門關鍵科目。我會制定計畫，利用線上資源自學微積分，並在基礎生物學中學習細胞結構與生命運作的原理。我計畫探索有機化學與生物化學，以期能流利地運用胺基酸、酵素和代謝途徑這些醫學的語言。</p>
+            <p>一位好的醫師，不僅要有科學的頭腦，更要有人文的關懷。因此，我積極參與社區服務，從中學習同理心、溝通、團隊合作與解決問題的能力。這是一項持續的努力，一種專業知識與人文素養的多維度結合，正符合成大醫學與人文整合的理想。因此，我熱切地希望能展現出專業知識與人文素養兼備的形象。</p>
+            <p>暑假期間，我將持續在醫院擔任志工，近距離觀察醫病關係，並將全人照護的理念內化於心。</p>
+            <p>基於這樣的動機，我的學習不限於校內。由於深知成大高度重視以學生為中心的學習模式與對科學探究的熱情，我積極投入智慧醫療的自主研究。</p>
+            <p>因此，我希望在進入醫學院前，能進一步增進在分子醫學領域的知識，特別是蛋白質結構與疾病機轉之間的關聯。鑑於我先前對阿茲海默症與β-類澱粉蛋白的研究，我相信學習生物資訊學能讓我透過閱讀學術期刊，培養批判性思維與科學素養。如此的探究，將為未來的臨床與實驗室工作奠定堅實的基礎。</p>
+          </div>
+        </section>
+
+        <!-- 階段二 -->
+        <section id="phase2" class="content-block hidden">
+          <h2 class="text-2xl font-bold text-[#0799a8] mb-4">階段二：精煉與深化 — 成大醫學六年養成</h2>
+          <div class="space-y-4 text-lg leading-relaxed text-gray-700">
+            <p>若有幸進入成大醫學系，我有一個非常具體且務實的六年學習計畫，我將全力以赴，以期在堅實的學術知識、臨床技能及人文素養方面，發展出卓越的醫學訓練。</p>
+            <p><strong class="text-indigo-600 font-semibold">大一至大二：</strong> 我相信最初的兩年將是奠基期，我會以開放的心態迎接豐富的跨領域學習機會。在這方面，我將專注於掌握普通化學、有機化學、普通生物學及生物化學的基礎。我會使用 Notion 等數位工具，並參與協作筆記專案。在人文學科方面，我會選修如「社會學導論」等課程。大二時，我將積極參與小組討論，練習時間管理，並以 GPA 4.0 為目標。我也計畫加入醫療服務隊與影像社，並爭取擔任領導職位。</p>
+            <p><strong class="text-indigo-600 font-semibold">大三至大四：</strong> 我期待著核心課程，如解剖學、組織學，特別是大體解剖，以獲得 3D 的理解。我將採用以系統為基礎的學習策略，並透過整合藥理學、病理學等科目，以一個連貫的框架來準備第一階段國考。</p>
+            <p><strong class="text-indigo-600 font-semibold">大五至大六：</strong> 我將開始臨床見習（clerkship），跟隨主治醫師，參與查房。我會磨練病史詢問、病歷撰寫及全人照護的技能。我的目標是申請短期交換（例如香港大學或新加坡國立大學），並完成第二階段國考與臨床技能測驗（OSCE）。我的長期目標是在林口長庚醫院完成 PGY 住院醫師訓練。</p>
+          </div>
+        </section>
+
+        <!-- 階段三 -->
+        <section id="phase3" class="content-block hidden">
+          <h2 class="text-2xl font-bold text-[#0799a8] mb-4">階段三：從願景到志業</h2>
+          <div class="space-y-4 text-lg leading-relaxed text-gray-700">
+            <p>「成為一個好醫師前，要先成為一個成功的『人』。」這句座右銘從一開始就指引著我的職涯願景。我期許自己不僅是一位技術精湛的外科醫師，更是一位具備社會意識、同理心與責任感的仁醫。我希望我的外科實踐能成為一座橋樑，連結人、思想與社群。</p>
+            <p>我計畫在林口長庚醫院接受外科住院醫師訓練，並專注於將人工智慧整合到手術規劃中。我希望能研究虛擬建模與感測器技術，為機器人手術帶來觸覺回饋，並推動個人化精準醫療的進展。我也希望能投稿至《外科年鑑》（Annals of Surgery）等期刊，並追隨如 Eric Topol 醫師等導師的腳步。</p>
+            <p>在取得專科醫師執照後，我的目標是前往越南的 FV 醫院進行院士（fellowship）訓練，那裡提供頂尖的設施與國際標準。我希望能將這些全球經驗帶回台灣的醫療體系，提升其競爭力。</p>
+            <p>我也將投身於教學與全球醫療服務，將臨床智慧與科技熱情傳承給下一代——正如我的導師們啟發我一樣。</p>
+          </div>
+        </section>
+
+        <!-- 結語 -->
+        <section id="conclusion" class="content-block hidden">
+          <h2 class="text-2xl font-bold text-[#0799a8] mb-4">結語：成大不僅是選擇，更是對未來的承諾</h2>
+          <div class="space-y-4 text-lg leading-relaxed text-gray-700">
+            <p>這不僅僅是一份學術路線圖，更是我對自己、對醫學、對社會的誓言。我相信我將與成大精神合一，將科技與人文融合，在未來醫療的發展中為病患帶來希望。</p>
+            <p>我衷心希望能獲得在成大醫學系學習與成長的機會，並奉獻我的一生，以榮耀這身白袍，不負社會的信賴。</p>
+          </div>
+        </section>
+        
+      </div>
+    </main>
+    
+    <footer class="text-center mt-12 text-sm text-gray-500">
+      <p>&copy; 2025 Statement of Purpose. All Rights Reserved.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const select = document.getElementById('phaseSelect');
+      const contentBlocks = document.querySelectorAll('.content-block');
+      let currentVisibleId = 'placeholder-content';
+
+      // 函數：根據 ID 顯示對應的區塊，並隱藏其他區塊
+      function showContent(id) {
+        // 如果選擇的區塊已經是當前顯示的，則不執行任何操作
+        if (id === currentVisibleId) return;
+
+        let blockToShow = null;
+        let blockToHide = document.getElementById(currentVisibleId);
+
+        // 找到要顯示的區塊
+        contentBlocks.forEach(block => {
+          if (block.id === id) {
+            blockToShow = block;
+          }
+        });
+
+        // 如果找到了要隱藏的區塊，先將其淡出
+        if (blockToHide) {
+          blockToHide.classList.add('opacity-0');
+          setTimeout(() => {
+            blockToHide.classList.add('hidden');
+          }, 300); // 這個時間需要和 CSS transition 的時間匹配
+        }
+
+        // 如果找到了要顯示的區塊，在舊區塊淡出後，將其淡入
+        if (blockToShow) {
+          setTimeout(() => {
+            blockToShow.classList.remove('hidden');
+            // 使用一個微小的延遲確保 'display' 屬性先生效，然後再改變透明度以觸發動畫
+            setTimeout(() => {
+              blockToShow.classList.remove('opacity-0');
+            }, 20);
+          }, blockToHide ? 300 : 0);
+        }
+        
+        // 更新當前顯示的區塊 ID
+        currentVisibleId = id;
+      }
+
+      // 頁面初次載入時，確保所有文字區塊都是不透明度為0且隱藏的
+      contentBlocks.forEach(block => {
+        if (block.id !== 'placeholder-content') {
+            block.classList.add('hidden', 'opacity-0');
+        }
+      });
+
+
+      // 監聽下拉選單的變動事件
+      select.addEventListener('change', function () {
+        showContent(this.value);
+      });
+    });
+  </script>
+</body>
+</html>
