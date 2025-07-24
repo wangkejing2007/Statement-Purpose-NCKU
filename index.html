@@ -65,7 +65,7 @@
             
             <!-- 新增的圖片 -->
             <div class="flex justify-center mb-4">
-                <img src="https://i.meee.com.tw/t66zslj.png" alt="成功大學校徽" class="w-1/5" style="max-width: 120px;" onerror="this.style.display='none'">
+                <img src="https://i.meee.com.tw/t66zslj.png" alt="成功大學校徽" class="w-1/4" style="max-width: 160px;" onerror="this.style.display='none'">
             </div>
 
             <header class="text-center mb-6">
@@ -235,32 +235,12 @@
             }
         }
         
-        // 初始化頁面
-        function init() {
-            // 預設選擇中文
-            switchLanguage('zh');
-            // 預設顯示第一階段內容
-            selectZh.value = 'zh-phase1';
-            displayContent('zh-phase1');
-        }
-
         // 事件監聽
-        btnZh.addEventListener('click', () => {
-            switchLanguage('zh');
-            selectZh.value = 'zh-phase1'; // 切換語言時預設顯示第一階段
-            displayContent('zh-phase1');
-        });
-        btnEn.addEventListener('click', () => {
-            switchLanguage('en');
-            selectEn.value = 'en-phase1'; // 切換語言時預設顯示第一階段
-            displayContent('en-phase1');
-        });
+        btnZh.addEventListener('click', () => switchLanguage('zh'));
+        btnEn.addEventListener('click', () => switchLanguage('en'));
         selectZh.addEventListener('change', (e) => displayContent(e.target.value));
         selectEn.addEventListener('change', (e) => displayContent(e.target.value));
         
-        // 頁面載入時執行初始化
-        document.addEventListener('DOMContentLoaded', init);
-
     </script>
 </body>
 </html>
