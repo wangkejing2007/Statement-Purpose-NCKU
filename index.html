@@ -44,7 +44,7 @@
             display: flex;
             justify-content: center; /* 水平置中內容 */
             align-items: center; /* 垂直置中內容 */
-            width: 70%; /* 使其全寬以更好地響應 */
+            width: 100%; /* 使其全寬以更好地響應 */
         }
         /* 響應式調整按鈕和下拉選單 */
         @media (min-width: 640px) { /* 小型螢幕及以上 */
@@ -92,7 +92,7 @@
 
         <!-- Audio Player Area -->
         <div id="audioPlayerContainer" class="audio-player-container hidden">
-            <!-- 將 audio 元素設定為響應式寬度並水平置中 -->
+            <!-- 音頻元素設定為響應式寬度並水平置中 -->
             <audio id="audioPlayer" controls class="w-full md:w-2/3 lg:w-1/2 mx-auto">
                 Your browser does not support the audio element.
             </audio>
@@ -100,7 +100,7 @@
     </div>
 
     <script>
-        // Get references to HTML elements
+        // 取得 HTML 元素的引用
         const phaseSelect = document.getElementById('phaseSelect');
         const actionButtons = document.getElementById('actionButtons');
         const browseBtn = document.getElementById('browseBtn');
@@ -109,7 +109,7 @@
         const audioPlayer = document.getElementById('audioPlayer');
         const audioPlayerContainer = document.getElementById('audioPlayerContainer');
 
-        // Content for each phase (extracted from the provided markdown)
+        // 各階段的內容（從提供的 Markdown 中提取）
         const phasesContent = {
             phase1: {
                 text: `<p>To become a student who aligns with the expectations of the School of Medicine at National Cheng Kung University, my high school years were not solely dedicated to academic achievement but were a foundational journey for the future. I saw that period as a time of “quiet cultivation,” laying deep roots for steadily ascending the summit of medicine. From “science and the humanities” to the frontiers of medical research, I prepared myself comprehensively across these three domains to embrace the challenges ahead.</p>
@@ -163,42 +163,42 @@
             }
         };
 
-        // Event listener for dropdown menu change
+        // 為下拉選單的變更添加事件監聽器
         phaseSelect.addEventListener('change', () => {
             const selectedPhase = phaseSelect.value;
 
-            // Hide previous content/audio and buttons
+            // 隱藏先前的內容/音頻和按鈕
             contentDisplay.classList.add('hidden');
             audioPlayerContainer.classList.add('hidden');
             actionButtons.classList.add('hidden');
-            audioPlayer.pause(); // Pause any currently playing audio
-            audioPlayer.removeAttribute('src'); // Clear audio source
+            audioPlayer.pause(); // 暫停任何正在播放的音頻
+            audioPlayer.removeAttribute('src'); // 清除音頻來源
 
             if (selectedPhase !== 'default') {
-                actionButtons.classList.remove('hidden'); // Show buttons if a phase is selected
+                actionButtons.classList.remove('hidden'); // 如果選擇了階段，顯示按鈕
             }
         });
 
-        // Event listener for "Browse Content" button
+        // 為「瀏覽內容」按鈕添加事件監聽器
         browseBtn.addEventListener('click', () => {
             const selectedPhase = phaseSelect.value;
             if (selectedPhase !== 'default' && phasesContent[selectedPhase]) {
                 contentDisplay.innerHTML = phasesContent[selectedPhase].text;
                 contentDisplay.classList.remove('hidden');
-                audioPlayerContainer.classList.add('hidden'); // Hide audio player
-                audioPlayer.pause(); // Pause any playing audio
+                audioPlayerContainer.classList.add('hidden'); // 隱藏音頻播放器
+                audioPlayer.pause(); // 暫停任何正在播放的音頻
             }
         });
 
-        // Event listener for "Listening Content" button
+        // 為「聆聽內容」按鈕添加事件監聽器
         listenBtn.addEventListener('click', () => {
             const selectedPhase = phaseSelect.value;
             if (selectedPhase !== 'default' && phasesContent[selectedPhase]) {
                 const audioUrl = phasesContent[selectedPhase].audio;
                 audioPlayer.src = audioUrl;
                 audioPlayerContainer.classList.remove('hidden');
-                contentDisplay.classList.add('hidden'); // Hide text content
-                audioPlayer.play().catch(e => console.error("Error playing audio:", e)); // Autoplay with error handling
+                contentDisplay.classList.add('hidden'); // 隱藏文字內容
+                audioPlayer.play().catch(e => console.error("播放音頻時出錯：", e)); // 自動播放並處理錯誤
             }
         });
     </script>
