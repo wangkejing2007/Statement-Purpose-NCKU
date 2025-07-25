@@ -10,41 +10,47 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8; /* Light blue-gray background */
+            background-color: #f0f4f8; /* 淺藍灰色背景 */
         }
         .container {
-            max-width: 900px; /* Increased max-width for better readability */
+            max-width: 900px; /* 增加最大寬度以提高可讀性 */
             margin: 2rem auto;
             padding: 2rem;
             background-color: #ffffff;
-            border-radius: 1rem; /* More rounded corners */
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Softer shadow */
+            border-radius: 1rem; /* 更圓的邊角 */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* 更柔和的陰影 */
         }
         .content-area {
             border: 1px solid #e2e8f0;
             padding: 1.5rem;
             border-radius: 0.75rem;
-            background-color: #f8fafc; /* Lighter background for content */
-            min-height: 200px; /* Ensure some height even if content is short */
-            max-height: 60vh; /* Limit height for scrollable content */
-            overflow-y: auto; /* Enable scrolling for long content */
-            line-height: 1.75; /* Improved line height for readability */
+            background-color: #f8fafc; /* 內容區域的淺色背景 */
+            min-height: 200px; /* 確保即使內容很短也有一定高度 */
+            max-height: 60vh; /* 限制高度以用於可滾動內容 */
+            overflow-y: auto; /* 啟用長內容的滾動 */
+            line-height: 1.75; /* 提高行高以提高可讀性 */
         }
         .content-area h3 {
-            font-size: 1.25rem; /* Larger sub-headings */
+            font-size: 1.25rem; /* 更大的副標題 */
             font-weight: 600;
             margin-top: 1rem;
             margin-bottom: 0.5rem;
-            color: #2563eb; /* Blue for subheadings */
+            color: #2563eb; /* 副標題的藍色 */
         }
         .content-area p {
             margin-bottom: 0.75rem;
         }
         .audio-player-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50vw; /* 頁面寬度的 50% */
+            justify-content: center; /* 水平置中內容 */
+            align-items: center; /* 垂直置中內容 */
+            width: 70%; /* 使其全寬以更好地響應 */
+        }
+        /* 響應式調整按鈕和下拉選單 */
+        @media (min-width: 640px) { /* 小型螢幕及以上 */
+            .action-buttons-flex-row {
+                flex-direction: row;
+            }
         }
     </style>
 </head>
@@ -72,7 +78,6 @@
         </div>
 
         <!-- Action Buttons (initially hidden) -->
-        <!-- Changed mb-4 to mb-2 to further reduce spacing below the buttons -->
         <div id="actionButtons" class="hidden flex flex-col sm:flex-row justify-center gap-4 mb-2">
             <button id="browseBtn" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
                 Browse Content
@@ -87,8 +92,8 @@
 
         <!-- Audio Player Area -->
         <div id="audioPlayerContainer" class="audio-player-container hidden">
-            <!-- Increased max-width from max-w-2xl to max-w-4xl for a larger player -->
-            <audio id="audioPlayer" controls class="w-full w-1/2">
+            <!-- 將 audio 元素設定為響應式寬度並水平置中 -->
+            <audio id="audioPlayer" controls class="w-full md:w-2/3 lg:w-1/2 mx-auto">
                 Your browser does not support the audio element.
             </audio>
         </div>
