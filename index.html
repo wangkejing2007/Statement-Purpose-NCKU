@@ -81,18 +81,18 @@
     const audioPlayer = document.getElementById('audioPlayer');
     const audioPlayerContainer = document.getElementById('audioPlayerContainer');
 
-    const phasesContent = {
-      phase1: `Phase 1: Foundation and Orientation\n\nTo become a student who aligns with the expectations of the School of Medicine at National Cheng Kung University, my high school years were not solely dedicated to academic achievement but were a foundational journey for the future. I saw that period as a time of “quiet cultivation,” laying deep roots for steadily ascending the summit of medicine. From “science and the humanities” to the frontiers of medical research, I prepared myself comprehensively across these three domains to embrace the challenges ahead.\n\n[完整內容已插入於實際部署版本中。]`,
-      phase2: `Phase 2: Refinement and Deepening\n\nIf given the honor of entering the School of Medicine, National Cheng Kung University, I have a very concrete and realistic six-year study plan that I would pursue with full commitment to developing excellent medical training in terms of solid academic knowledge, clinical skills, and humanistic aspects.\n\n[完整內容已插入於實際部署版本中。]`,
-      phase3: `Phase 3: From Vision to Vocation\n\n“Before becoming a good doctor, one must first become a successful person.” This motto has guided my career vision from the start.\n\n[完整內容已插入於實際部署版本中。]`,
-      conclusion: `Conclusion: National Cheng Kung University Is More Than a Choice\n\nIt is not merely an academic road map but an oath to myself, medicine, and society.\n\n[完整內容已插入於實際部署版本中。]`
-    };
-
     const phaseAudio = {
       phase1: 'NCKU-Phase-1.mp3',
       phase2: 'NCKU-Phase-2.mp3',
       phase3: 'NCKU-Phase-3.mp3',
       conclusion: 'NCKU-Conclusion.mp3'
+    };
+
+    const phasePages = {
+      phase1: 'phase-1.html',
+      phase2: 'phase-2.html',
+      phase3: 'phase-3.html',
+      conclusion: 'conclusion.html'
     };
 
     phaseSelect.addEventListener('change', () => {
@@ -106,11 +106,8 @@
 
     browseBtn.addEventListener('click', () => {
       const selected = phaseSelect.value;
-      if (selected !== 'default' && phasesContent[selected]) {
-        contentDisplay.textContent = phasesContent[selected];
-        contentDisplay.classList.remove('hidden');
-        audioPlayerContainer.classList.add('hidden');
-        audioPlayer.pause();
+      if (selected !== 'default' && phasePages[selected]) {
+        window.open(phasePages[selected], '_blank');
       }
     });
 
