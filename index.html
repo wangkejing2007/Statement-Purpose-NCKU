@@ -114,7 +114,7 @@
     browseBtn.addEventListener('click', () => {
       const selected = phaseSelect.value;
       if (selected !== 'default' && phasePages[selected]) {
-        window.open(phasePages[selected], '_blank');
+        window.open(phasePages[selected], 'newwindow', 'width=800,height=600,toolbar=no,menubar=no,scrollbars=yes,resizable=yes');
       }
     });
 
