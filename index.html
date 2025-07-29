@@ -31,9 +31,15 @@
     }
     .audio-player-container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 100%;
+    }
+    .audio-note {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 0.5rem;
     }
     /* 手機螢幕加大按鈕尺寸 */
     @media (max-width: 640px) {
@@ -76,6 +82,7 @@
       <audio id="audioPlayer" controls class="w-full md:w-3/4 lg:w-1/2 mx-auto">
         Your browser does not support the audio element.
       </audio>
+      <div class="audio-note">⚠️本音訊檔是以TTS使用我的聲音樣本合成語音。</div>
     </div>
   </div>
 
@@ -88,6 +95,7 @@
     const audioPlayer = document.getElementById('audioPlayer');
     const audioPlayerContainer = document.getElementById('audioPlayerContainer');
 
+    // 將音檔恢復為本地相對路徑
     const phaseAudio = {
       phase1: 'NCKU-Phase-1.mp3',
       phase2: 'NCKU-Phase-2.mp3',
