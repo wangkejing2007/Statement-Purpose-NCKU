@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phase 1: Foundation and Orientation</title>
   <style>
-    /* 全站一致的暗色主題樣式 */
+    /* 全站一致的淺色主題樣式 */
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6; /* 縮小行距 */
-      background-color: #333333;
-      color: #dcdcdc;
-      padding: 40px 50px 50px 50px; /* 縮減上邊界距離 */
+      background-color: #f9f9f9;
+      color: #333333;
+      padding: 20px 50px 50px 50px; /* 縮小上方空白距離 */
     }
     h1, h2, h3, h4, h5, h6 {
-      color: #00aa66; /* 改成綠色 */
+      color: #007744; /* 淺色設計的綠色 */
       font-weight: 900;
     }
     h1 {
@@ -28,18 +28,57 @@
     }
     p {
       margin-bottom: 16px;
-      color: #bfbfbf;
+      color: #555555;
       font-size: 1.05em;
+      text-indent: 1em;
     }
     a {
-      color: #00aa66;
+      color: #007744;
     }
     a:hover {
-      color: #33cc88;
+      color: #33aa77;
+    }
+    .video-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    video {
+      width: 80%;
+      height: auto;
+      border: 3px solid #555555; /* 深灰色邊框 */
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* 陰影效果 */
+      transition: transform 0.3s ease; /* 動畫過渡效果 */
+    }
+    video:hover {
+      transform: scale(1.03); /* 滑鼠移動時微微放大 */
+    }
+    /* 手機版調整 */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px 20px 20px 20px; /* 縮小手機上方空白距離 */
+      }
+      h1 {
+        font-size: 1.4em;
+        margin-bottom: 12px;
+      }
+      h3 {
+        font-size: 1.05em;
+        margin-top: 16px;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 1em;
+        margin-bottom: 12px;
+      }
+      video {
+        width: 100%;
+      }
     }
   </style>
 </head>
-<body><h1 id="phase-3-from-vision-to-vocation">Phase 3:From Vision to Vocation</h1>
+<body>
+<h1 id="phase-3-from-vision-to-vocation">Phase 3:From Vision to Vocation</h1>
 <p>“Before becoming a good doctor, one must first become a successful person.” This motto has guided my career vision from the start. I aspire not only to be a technically proficient surgeon but also a compassionate physician with social awareness, empathy, and responsibility. I want my surgical practice to be not only a matter of technique but also a bridge that connects people, ideas, and communities.</p>
 <h3 id="a-surgeon-s-art-precision-and-empathy-combined">A Surgeon’s Art: Precision and Empathy Combined</h3>
 <p>I intend to pursue training after PGY with a surgical residency program at National Cheng Kung University Hospital and assume the role of attending surgeon. Surgery is interesting due to the unique combination of technical skills and human compassion that coincide during an operation on the table. I see myself within next-gen surgery, tightly integrated into AI.</p>
@@ -53,5 +92,12 @@
 <p>A physician&#39;s role extends far beyond the practice of medicine into the realms of teaching and service to society. I aspire to take part in medical education and pass along clinical experiences and my passion for technology to the next generation, much like my mentors did for me. Furthermore, I plan to participate in international medical outreach programs and use the skills I develop at National Cheng Kung University to serve the less fortunate, which is the noblest ideal of serving humanity.</p>
 <p>From the curiosity of childhood to a well-charted plan today, my passion for medicine only grows stronger. I am deeply committed to joining National Cheng Kung University&#39;s medical community, where I know I will receive world-class training, visionary exposure, and a solid humanistic foundation.</p>
 <p>A physician&#39;s role extends far beyond the practice of medicine into the realms of teaching and service to society. I aspire to take part in medical education and pass along clinical experiences and my passion for technology to the next generation, much like my mentors did for me. Furthermore, I plan to participate in international medical outreach programs and use the skills I develop at National Cheng Kung University to serve the less fortunate and the noblest ideal of serving humanity.</p>
+</body>
+<div class="video-container">
+    <video controls>
+      <source src="phase-3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+</div>
 </body>
 </html>
