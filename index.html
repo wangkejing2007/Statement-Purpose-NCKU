@@ -30,23 +30,23 @@
       object-fit: contain;
     }
     h1 {
-      font-size: 1.5rem; /* 縮小字體級數 */
+      font-size: 1.5rem;
       font-weight: 800;
       color: #333;
-      margin-bottom: 0.05rem; /* 縮小與下方的空白 */
+      margin-bottom: 0.05rem;
     }
     p.subtitle {
       font-size: 1.3rem;
       font-weight: 600;
       color: #555;
-      margin-top: 1rem; /* 加大與上方的空白 */
+      margin-top: 1rem;
       margin-bottom: 1.2rem;
     }
     select {
-      width: 70%; /* 縮減寬度 */
-      max-width: 350px; /* 同時縮減最大寬度 */
-      padding: 0.75rem;
-      font-size: 0.85rem; /* 縮小字體級數 */
+      width: 70%;
+      max-width: 350px;
+      padding: 1.2rem; /* 調整高度更均衡 */
+      font-size: 1.05rem; /* 微調字體更大一些 */
       border: 2px solid #ccc;
       border-radius: 0.5rem;
       cursor: pointer;
@@ -95,6 +95,9 @@
       align-items: center;
       width: 100%;
     }
+    .audio-player-container audio {
+      width: 90%; /* 加寬音頻播放器寬度 */
+    }
     .audio-note {
       font-size: 0.85rem;
       color: #555;
@@ -107,6 +110,9 @@
       }
       .logo {
         width: 80%;
+      }
+      .audio-player-container audio {
+        width: 95%;
       }
     }
   </style>
