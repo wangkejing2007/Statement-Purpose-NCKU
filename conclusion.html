@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phase 1: Foundation and Orientation</title>
   <style>
-    /* 全站一致的暗色主題樣式 */
+    /* 全站一致的淺色主題樣式 */
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6; /* 縮小行距 */
-      background-color: #333333;
-      color: #dcdcdc;
-      padding: 40px 50px 50px 50px; /* 縮減上邊界距離 */
+      background-color: #f9f9f9;
+      color: #333333;
+      padding: 20px 50px 50px 50px; /* 縮小上方空白距離 */
     }
     h1, h2, h3, h4, h5, h6 {
-      color: #00aa66; /* 改成綠色 */
+      color: #007744; /* 淺色設計的綠色 */
       font-weight: 900;
     }
     h1 {
@@ -28,14 +28,52 @@
     }
     p {
       margin-bottom: 16px;
-      color: #bfbfbf;
+      color: #555555;
       font-size: 1.05em;
+      text-indent: 1em;
     }
     a {
-      color: #00aa66;
+      color: #007744;
     }
     a:hover {
-      color: #33cc88;
+      color: #33aa77;
+    }
+    .video-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    video {
+      width: 80%;
+      height: auto;
+      border: 3px solid #555555; /* 深灰色邊框 */
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* 陰影效果 */
+      transition: transform 0.3s ease; /* 動畫過渡效果 */
+    }
+    video:hover {
+      transform: scale(1.03); /* 滑鼠移動時微微放大 */
+    }
+    /* 手機版調整 */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px 20px 20px 20px; /* 縮小手機上方空白距離 */
+      }
+      h1 {
+        font-size: 1.4em;
+        margin-bottom: 12px;
+      }
+      h3 {
+        font-size: 1.05em;
+        margin-top: 16px;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 1em;
+        margin-bottom: 12px;
+      }
+      video {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -44,5 +82,11 @@
 <p>National Cheng Kung University Is More Than a Choice—It Is a Promise to My Future
 It is not merely an academic road map but an oath to myself, medicine, and society. A conviction within me goes beyond being a surgeon; I believe I would be joining National Cheng Kung University in spirit, blending technology and humanity to give hope to the patients in the development of their futures in medical care. This belief has been deeply ingrained in me through years of reflection and personal growth. The evolving intersection between technology and healthcare offers the potential for profound change, and I am driven to explore this fusion further.</p>
 <p>I sincerely hope to be granted the opportunity to learn and grow at the School of Medicine, National Cheng Kung University, and to devote my life to honoring the white coat and fulfilling society’s trust. I am ready to embrace the challenges ahead and to dedicate my knowledge and compassion to the service of others. Through this journey, I aim to uphold the core values of integrity, excellence, and human dignity, making meaningful contributions to the field of medicine and society as a whole.</p>
+<div class="video-container">
+    <video controls>
+      <source src="phase-3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+</div>
 </body>
 </html>
