@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phase 1: Foundation and Orientation</title>
   <style>
-    /* 全站一致的暗色主題樣式 */
+    /* 全站一致的淺色主題樣式 */
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6; /* 縮小行距 */
-      background-color: #333333;
-      color: #dcdcdc;
-      padding: 40px 50px 50px 50px; /* 縮減上邊界距離 */
+      background-color: #f9f9f9;
+      color: #333333;
+      padding: 20px 50px 50px 50px; /* 縮小上方空白距離 */
     }
     h1, h2, h3, h4, h5, h6 {
-      color: #00aa66; /* 改成綠色 */
+      color: #007744; /* 淺色設計的綠色 */
       font-weight: 900;
     }
     h1 {
@@ -28,14 +28,45 @@
     }
     p {
       margin-bottom: 16px;
-      color: #bfbfbf;
+      color: #555555;
       font-size: 1.05em;
+      text-indent: 1em;
     }
     a {
-      color: #00aa66;
+      color: #007744;
     }
     a:hover {
-      color: #33cc88;
+      color: #33aa77;
+    }
+    .video-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    video {
+      width: 80%;
+      height: auto;
+    }
+    /* 手機版調整 */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px 20px 20px 20px; /* 縮小手機上方空白距離 */
+      }
+      h1 {
+        font-size: 1.4em;
+        margin-bottom: 12px;
+      }
+      h3 {
+        font-size: 1.05em;
+        margin-top: 16px;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 1em;
+        margin-bottom: 12px;
+      }
+      video {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -51,5 +82,11 @@
   <h3 id="exploring-the-frontiers-of-medicine">Exploring the frontiers of medicine</h3>
   <p>Acting on such motivation, I did not limit my learning to school. Since I knew that National Cheng Kung University highly regarded student-centered learning and enthusiasm for scientific inquiry, I engaged myself vigorously in independent research on smart medicine.</p>
   <p>I would therefore like to advance my knowledge of molecular medicine, specifically the link between protein structures and the mechanisms of diseases, before entering medical school. Given my prior research on Alzheimer's disease in relation to β-amyloid, I think that studying bioinformatics will allow me to gain critical thinking and scientific literacy skills by keeping up with academic journals. Thus, such an investigation will form a strong basis in clinical and laboratory work.</p>
+ <div class="video-container">
+    <video controls>
+      <source src="phase-1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 </body>
 </html>
