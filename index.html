@@ -21,101 +21,58 @@
       text-align: center;
     }
     .logo {
-      width: 60%;
+      width: 50%;
       height: auto;
-      margin-bottom: 0.3rem;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto 2rem auto;
       object-fit: contain;
     }
-    h1 {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: #333;
-      margin-bottom: 0.05rem;
+    .center-image {
+      width: 60%;
+      height: auto;
+      display: block;
+      margin: 0 auto 1rem auto;
     }
-    p.subtitle {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #555;
+    .footer-text {
+      font-size: 1.25rem;
+      color: #898585;
       margin-top: 1rem;
-      margin-bottom: 1.2rem;
+      font-weight: normal;
     }
-    select {
-      width: 70%;
-      max-width: 350px;
-      padding: 0.7rem;
-      font-size: 1rem;
-      border: 2px solid #ccc;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      margin-bottom: 2rem;
-    }
-    .buttons {
-      display: none;
-      gap: 1rem;
+    .button-row {
+      margin-top: 1rem;
+      display: flex;
       justify-content: center;
-      margin-bottom: 1rem;
+      gap: 1.5rem;
     }
-    button {
-      font-size: 0.85rem;
-      font-weight: bold;
-      color: white;
-      padding: 0.65rem 1.2rem;
-      border: none;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    #browseBtn {
-      background-color: #dc2626;
-    }
-    #listenBtn {
-      background-color: #2563eb;
-    }
-    button:hover {
-      transform: scale(1.05);
-    }
-    .content-area {
-      display: none;
-      border: 1px solid #e2e8f0;
-      padding: 1.5rem;
+    .custom-button {
+      padding: 0.8rem 1.5rem;
+      border: 2px solid #a81313;
+      background-color: transparent;
+      color: #333333;
+      font-size: 1.25rem;
       border-radius: 0.75rem;
-      background-color: #f8fafc;
-      max-height: 70vh;
-      overflow-y: auto;
-      text-align: left;
-      white-space: pre-wrap;
-      line-height: 1.75;
+      cursor: pointer;
+      transition: 0.3s ease;
     }
-    .audio-player-container {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-    .audio-player-container audio {
-      width: 80%; /* 縮短桌機模式的音頻控制器顯示寬度 */
-    }
-    .audio-note {
-      font-size: 0.85rem;
-      color: #555;
-      margin-top: 0.5rem;
+    .custom-button:hover {
+      background-color: #a81313;
+      color: white;
+      transform: scale(1.08);
     }
     @media (max-width: 640px) {
-      button {
-        font-size: 0.8rem; /* 縮小手機模式按鈕字體級數 */
-        padding: 0.6rem 1rem; /* 縮小手機模式按鈕的顯示比例 */
-      }
       .logo {
+        width: 70%;
+      }
+      .center-image {
         width: 80%;
       }
-      select {
-        width: 90%; /* 加寬手機螢幕下拉選單寬度 */
+      .footer-text {
+        font-size: 1rem;
       }
-      .audio-player-container audio {
-        width: 95%;
+      .custom-button {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.2rem;
       }
     }
   </style>
@@ -123,87 +80,12 @@
 <body>
   <div class="container">
     <img src="https://i.meee.com.tw/9qhvj9q.png" alt="NCKU Logo" class="logo" />
-    <h1>Statement of Purpose</h1>
-    <p class="subtitle">Wang, Ke-Jing</p>
-
-    <select id="phaseSelect">
-      <option value="default">Please Select a Phase...</option>
-      <option value="phase1">Phase 1: Foundation and Orientation</option>
-      <option value="phase2">Phase 2: Refinement and Deepening</option>
-      <option value="phase3">Phase 3: From Vision to Vocation</option>
-      <option value="conclusion">Conclusion: NCKU Is More Than a Choice</option>
-    </select>
-
-    <div id="actionButtons" class="buttons">
-      <button id="browseBtn">Explore the content</button>
-      <button id="listenBtn">Listen to the audio</button>
-    </div>
-
-    <div id="contentDisplay" class="content-area"></div>
-    <div id="audioPlayerContainer" class="audio-player-container">
-      <audio id="audioPlayer" controls>
-        Your browser does not support the audio element.
-      </audio>
-      <div class="audio-note">⚠️ FishAudio.TTS-generated from my voice sample.</div>
+    <img src="https://youke1.picui.cn/s1/2025/08/01/688bc725d5615.png" alt="Center Image" class="center-image" />
+    <div class="footer-text">胡志明市臺灣學校 王可靜</div>
+    <div class="button-row">
+      <button class="custom-button" onclick="window.location.href='NCKU-Chinese.html'">中文版</button>
+      <button class="custom-button" onclick="window.location.href='NCKU-English.html'">英文版</button>
     </div>
   </div>
-
-  <script>
-    const phaseSelect = document.getElementById('phaseSelect');
-    const actionButtons = document.getElementById('actionButtons');
-    const browseBtn = document.getElementById('browseBtn');
-    const listenBtn = document.getElementById('listenBtn');
-    const contentDisplay = document.getElementById('contentDisplay');
-    const audioPlayer = document.getElementById('audioPlayer');
-    const audioPlayerContainer = document.getElementById('audioPlayerContainer');
-
-    const phaseAudio = {
-      phase1: 'NCKU-Phase-1.mp3',
-      phase2: 'NCKU-Phase-2.mp3',
-      phase3: 'NCKU-Phase-3.mp3',
-      conclusion: 'NCKU-Conclusion.mp3'
-    };
-
-    const phasePages = {
-      phase1: 'phase-1.html',
-      phase2: 'phase-2.html',
-      phase3: 'phase-3.html',
-      conclusion: 'conclusion.html'
-    };
-
-    phaseSelect.addEventListener('change', () => {
-      const selected = phaseSelect.value;
-      contentDisplay.style.display = 'none';
-      audioPlayerContainer.style.display = 'none';
-      audioPlayer.pause();
-      audioPlayer.removeAttribute('src');
-      actionButtons.style.display = selected === 'default' ? 'none' : 'flex';
-    });
-
-    browseBtn.addEventListener('click', () => {
-      const selected = phaseSelect.value;
-      if (selected !== 'default' && phasePages[selected]) {
-        const width = 800;
-        const height = 600;
-        const left = (window.screen.width - width) / 2;
-        const top = (window.screen.height - height) / 2;
-        window.open(
-          phasePages[selected],
-          'newwindow',
-          `width=${width},height=${height},top=${top},left=${left},scrollbars=yes,resizable=yes`
-        );
-      }
-    });
-
-    listenBtn.addEventListener('click', () => {
-      const selected = phaseSelect.value;
-      if (selected !== 'default' && phaseAudio[selected]) {
-        audioPlayer.src = phaseAudio[selected];
-        audioPlayerContainer.style.display = 'flex';
-        contentDisplay.style.display = 'none';
-        audioPlayer.play().catch(err => console.error('Audio playback error:', err));
-      }
-    });
-  </script>
 </body>
 </html>
