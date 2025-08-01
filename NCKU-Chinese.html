@@ -138,8 +138,8 @@
     </select>
 
     <div id="actionButtons" class="buttons">
-      <button id="browseBtn">Explore the content</button>
-      <button id="listenBtn">Listen to the audio</button>
+      <button id="browseBtn">瀏覽讀書計畫</button>
+      <button id="listenBtn">聆聽讀書計畫</button>
     </div>
 
     <div id="contentDisplay" class="content-area"></div>
@@ -161,17 +161,17 @@
     const audioPlayerContainer = document.getElementById('audioPlayerContainer');
 
     const phaseAudio = {
-      phase1: 'NCKU-Phase-1.mp3',
-      phase2: 'NCKU-Phase-2.mp3',
-      phase3: 'NCKU-Phase-3.mp3',
-      conclusion: 'NCKU-Conclusion.mp3'
+      phase1: 'NCKU-C-Phase-1.mp3',
+      phase2: 'NCKU-C-Phase-2.mp3',
+      phase3: 'NCKU-C-Phase-3.mp3',
+      conclusion: 'NCKU-C-Conclusion.mp3'
     };
 
     const phasePages = {
-      phase1: 'phase-1.html',
-      phase2: 'phase-2.html',
-      phase3: 'phase-3.html',
-      conclusion: 'conclusion.html'
+      phase1: 'C-phase-1.html',
+      phase2: 'C-phase-2.html',
+      phase3: 'C-phase-3.html',
+      conclusion: 'C-conclusion.html'
     };
 
     phaseSelect.addEventListener('change', () => {
